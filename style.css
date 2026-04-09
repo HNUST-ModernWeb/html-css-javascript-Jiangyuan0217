@@ -1,0 +1,238 @@
+/* 整体样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f2f5;
+    font-family: 'Segoe UI', 'PingFang SC', Roboto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 卡片样式 */
+.card {
+    background: white;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 28px 32px;
+}
+
+h1 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #1a1a2e;
+}
+
+/* 头像区域 */
+.avatar-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: #e2e8f0;
+}
+
+.upload-btn {
+    margin-top: 12px;
+    background: #eef2ff;
+    padding: 6px 18px;
+    border-radius: 40px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+.upload-btn:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+
+.info-row {
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;      
+    gap: 12px;              
+}
+
+.info-row label {
+    font-weight: 600;
+    color: #334155;
+    width: 50px;             
+    flex-shrink: 0;         
+    font-size: 15px;
+    white-space: nowrap;    
+}
+
+
+.display-text {
+    background: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 16px;
+    flex: 1;                 
+    font-size: 15px;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    word-break: break-word;  
+    line-height: 1.4;
+}
+
+/* 编辑模式 */
+.edit-input {
+    padding: 10px 14px;
+    border-radius: 16px;
+    border: 1.5px solid #cbd5e1;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    flex: 1;
+}
+
+.edit-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+textarea.edit-input {
+    resize: vertical;
+    min-height: 70px;
+}
+
+/* 隐藏类 */
+.hidden {
+    display: none;
+}
+
+/* 按钮样式 */
+.btn-group {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 28px;
+}
+
+.btn {
+    padding: 8px 22px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+    transform: scale(0.97);
+}
+
+.btn-outline {
+    background: #f1f5f9;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-outline:hover {
+    background: #e2e8f0;
+    transform: scale(0.97);
+}
+
+/* 弹窗样式 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    width: 380px;
+    max-width: 90%;
+    border-radius: 24px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eef2ff;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    color: #1e293b;
+}
+
+.close {
+    font-size: 28px;
+    cursor: pointer;
+    color: #94a3b8;
+    line-height: 1;
+}
+
+.close:hover {
+    color: #ef4444;
+}
+
+.history-list {
+    padding: 16px 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.history-item {
+    background: #f8fafc;
+    border-left: 4px solid #3b82f6;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+.history-time {
+    color: #64748b;
+    font-size: 11px;
+    margin-bottom: 6px;
+}
+
+.history-change {
+    color: #0f172a;
+    word-break: break-all;
+}
+
+.history-change span {
+    font-weight: 600;
+    color: #3b82f6;
+}

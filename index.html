@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的个人信息卡片</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1> 个人信息卡片</h1>
+
+        <!-- 头像部分 -->
+        <div class="avatar-area">
+            <img id="avatar" class="avatar" src="myavatar.jpg" alt="头像">
+            <div class="upload-btn" id="uploadBtn"> 上传头像</div>
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+        </div>
+
+        <!-- 姓名部分 -->
+        <div class="info-row">
+            <label> 姓名：</label>
+            <span id="nameText" class="display-text">杨奕佳</span>
+            <input type="text" id="nameInput" class="edit-input hidden">
+        </div>
+
+        <!-- 简介部分 -->
+        <div class="info-row">
+            <label> 简介：</label>
+            <span id="bioText" class="display-text">湖南科技大学计算机科学与工程学院24级计算机科学与技术八班</span>
+            <textarea id="bioInput" class="edit-input hidden" rows="2"></textarea>
+        </div>
+
+        <!-- 按钮组 -->
+        <div class="btn-group">
+            <button id="editBtn" class="btn btn-outline"> 编辑</button>
+            <button id="saveBtn" class="btn btn-primary"> 保存</button>
+            <button id="historyBtn" class="btn btn-outline"> 历史记录</button>
+        </div>
+    </div>
+
+<!-- 历史记录弹窗 -->
+<div id="historyModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3> 修改历史记录</h3>
+            <span class="close" id="closeModal">&times;</span>
+        </div>
+        <div id="historyList" class="history-list">
+            <p style="color: #999;">暂无历史记录，保存修改后会显示在这里~</p>
+        </div>
+    </div>
+</div>‘
+
+    <script src="script.js"></script>
+</body>
+</html>
